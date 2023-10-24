@@ -1,0 +1,31 @@
+{
+    "name": "WSTD_CRSHR",
+    "dpf": {
+	    "dpf_path": "../dep/",
+        "makefile_dep": [
+            "wstd.clrs"
+        ],
+        "enable_ui": true,
+        "ui_size": {
+            "width": 222,
+            "height": 180
+        },
+        "midi_input": 0,
+        "midi_output": 0,
+        "version": "0, 1, 0",
+        "license": "GPL-3.0-or-later",
+        "homepage": "https://wasted.audio/software/wstd_crshr",
+        "plugin_uri": "https://wasted.audio/software/wstd_crshr",
+        "plugin_clap_id": "audio.wasted.wstd_crshr",
+        "plugin_formats": [
+            "jack"
+        ],
+        "lv2_info": "lv2:DistortionPlugin",
+        "vst3_info": "Fx|Distortion|Stereo",
+        "clap_info": [
+            "audio-effect",
+            "glitch",
+            "stereo"
+        ]
+    }
+}
