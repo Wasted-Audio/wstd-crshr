@@ -18,7 +18,10 @@
         "plugin_uri": "https://wasted.audio/software/wstd_crshr",
         "plugin_clap_id": "audio.wasted.wstd_crshr",
         "plugin_formats": [
-            "jack"
+            "lv2_sep",
+            "vst2",
+            "vst3",
+            "clap"
         ],
         "lv2_info": "lv2:DistortionPlugin",
         "vst3_info": "Fx|Distortion|Stereo",
