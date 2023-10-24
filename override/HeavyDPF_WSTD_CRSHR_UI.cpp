@@ -74,11 +74,6 @@ protected:
     // ----------------------------------------------------------------------------------------------------------------
     // Widget Callbacks
 
-    void showCrshr(int crshstep, float hundred, float KnobFlags)
-    {
-
-    }
-
    /**
       ImGui specific onDisplay function.
     */
@@ -104,13 +99,11 @@ protected:
         ImFont* titleBarFont = io.Fonts->Fonts[2];
         ImFont* mediumFont = io.Fonts->Fonts[3];
 
-        // auto intense = 20.0f / 5.0f;
-
         auto intense        = (pow((float)fcrshr * -1.0f + 514.0f, 2.0f) / 2500.0f - 20.0f) / 5.0f;
         auto CrshrActive    = ColorBright(Green, intense);
         auto CrshrHovered   = ColorBright(GreenBr, intense);
-        auto MixActive      = ColorMix(CrshrActive, Yellow, intense, fmix);
-        auto MixHovered     = ColorMix(CrshrHovered, YellowBr, intense, fmix);
+        auto MixActive      = ColorMix(Green, Yellow, intense, fmix);
+        auto MixHovered     = ColorMix(GreenBr, YellowBr, intense, fmix);
 
         const float hundred = 100 * scaleFactor;
 
@@ -130,8 +123,6 @@ protected:
             ImGui::PushFont(defaultFont);
             auto ImGuiKnob_Flags = ImGuiKnobFlags_DoubleClickReset + ImGuiKnobFlags_ValueTooltip + ImGuiKnobFlags_NoInput + ImGuiKnobFlags_ValueTooltipHideOnClick;
             auto ImGuiKnob_FlagsLog = ImGuiKnob_Flags + ImGuiKnobFlags_Logarithmic;
-
-
 
             ImGui::PushStyleColor(ImGuiCol_ButtonActive,    (ImVec4)CrshrActive);
             ImGui::PushStyleColor(ImGuiCol_ButtonHovered,   (ImVec4)CrshrHovered);
