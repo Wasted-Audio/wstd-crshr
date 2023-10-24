@@ -7,8 +7,8 @@
         ],
         "enable_ui": true,
         "ui_size": {
-            "width": 222,
-            "height": 180
+            "width": 228,
+            "height": 170
         },
         "midi_input": 0,
         "midi_output": 0,

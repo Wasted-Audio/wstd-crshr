@@ -109,8 +109,8 @@ protected:
         auto intense        = (pow((float)fcrshr * -1.0f + 514.0f, 2.0f) / 2500.0f - 20.0f) / 5.0f;
         auto CrshrActive    = ColorBright(Green, intense);
         auto CrshrHovered   = ColorBright(GreenBr, intense);
-        auto MixActive      = ColorMix(TimeActive, Yellow, intense, fmix);
-        auto MixHovered     = ColorMix(TimeHovered, YellowBr, intense, fmix);
+        auto MixActive      = ColorMix(CrshrActive, Yellow, intense, fmix);
+        auto MixHovered     = ColorMix(CrshrHovered, YellowBr, intense, fmix);
 
         const float hundred = 100 * scaleFactor;
 
@@ -124,7 +124,7 @@ protected:
         }
 
         ImGui::PushFont(titleBarFont);
-        if (ImGui::Begin("WSTD CRSHR", nullptr, ImGuiWindowFlags_NoResize + ImGuiWindowFlags_NoCollapse))
+        if (ImGui::Begin("WSTD CRSHR", nullptr, ImGuiWindowFlags_NoResize + ImGuiWindowFlags_NoCollapse + ImGuiWindowFlags_NoScrollbar))
         {
             ImGui::Dummy(ImVec2(0.0f, 6.0f * scaleFactor));
             ImGui::PushFont(defaultFont);
