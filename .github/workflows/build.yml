@@ -57,8 +57,8 @@ jobs:
           name: ${{ github.ref_name }}
           draft: false
           prerelease: false
-          # files: |
-          #   WSTD_CRSHR/*.tar.gz
+          files: |
+            WSTD_CRSHR/*.tar.gz
 
   win64:
     runs-on: ubuntu-20.04
@@ -115,8 +115,8 @@ jobs:
           name: ${{ github.ref_name }}
           draft: false
           prerelease: false
-          # files: |
-          #   WSTD_CRSHR/*.tar.gz
+          files: |
+            WSTD_CRSHR/*.tar.gz
 
   macos-universal:
     runs-on: macos-11
@@ -167,5 +167,5 @@ jobs:
           name: ${{ github.ref_name }}
           draft: false
           prerelease: false
-          # files: |
-          #   WSTD_CRSHR/*-macOS.pkg
+          files: |
+            WSTD_CRSHR/*-macOS.pkg
