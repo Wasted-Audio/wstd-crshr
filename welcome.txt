@@ -1,0 +1,7 @@
+@name@
+
+This is our super simple bit reduction effect plugin.
+
+It is very easy to use, with some basic controls.
+
+Like all our other software this plugin is without DRM and Opensource.
