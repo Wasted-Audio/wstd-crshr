@@ -18,8 +18,6 @@ class ImGuiPluginUI : public UI
     int fcrshr = 512;
     float fmix = 50.0f;
 
-    ResizeHandle fResizeHandle;
-
     // ----------------------------------------------------------------------------------------------------------------
 
 public:
@@ -28,11 +26,8 @@ public:
       The UI should be initialized to a default state that matches the plugin side.
     */
     ImGuiPluginUI()
-        : UI(DISTRHO_UI_DEFAULT_WIDTH, DISTRHO_UI_DEFAULT_HEIGHT, true),
-          fResizeHandle(this)
+        : UI(DISTRHO_UI_DEFAULT_WIDTH, DISTRHO_UI_DEFAULT_HEIGHT)
     {
-        setGeometryConstraints(DISTRHO_UI_DEFAULT_WIDTH, DISTRHO_UI_DEFAULT_HEIGHT, true);
-
         ImGuiIO& io(ImGui::GetIO());
 
         ImFontConfig fc;
@@ -46,8 +41,6 @@ public:
         io.Fonts->AddFontFromMemoryCompressedTTF((void*)veramobd_compressed_data, veramobd_compressed_size, 12.5f * getScaleFactor(), &fc);
         io.Fonts->Build();
         io.FontDefault = io.Fonts->Fonts[1];
-
-        fResizeHandle.hide();
     }
 
 protected:
