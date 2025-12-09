@@ -12,7 +12,7 @@
         },
         "midi_input": 0,
         "midi_output": 0,
-        "version": "1, 1, 0",
+        "version": "1, 1, 1",
         "maker": "Wasted Audio",
         "brand_id": "Wstd",
         "brand_id_no_vst3": true,
